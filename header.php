@@ -18,6 +18,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">จัดการอุปกรณ์</a>
+          <a class="dropdown-item" href="#">จัดการระบบ</a>
           <a class="dropdown-item" href="#">จัดการส่วนงาน</a>
         </div>
       </li>
