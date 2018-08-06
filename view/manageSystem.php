@@ -3,13 +3,7 @@
 ?>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12">
-        <span style="font-size: 35px; color:#2C3E50;">
-          <i class="fas fa-sitemap"></i>
-        </span>
-        &nbsp;&nbsp;&nbsp;
-        <span class="font18 font_bold">จัดการระบบ</span>
-        &nbsp;&nbsp;&nbsp;
+    <div class="col">
         <a href='#modal1' data-toggle='modal'  id="addBtn">
             <button type="button" class="btn btn-primary">เพิ่มระบบ</button>
         </a>
@@ -17,8 +11,8 @@
   </div>
   <br/>
   <div class="row">
-    <div class="col-xs-12">
-      <table id="datatable" class="table table-striped table-bordered" >
+    <div class="col">
+      <table id="datatable" class="table table-striped table-bordered" style="width:100%;">
         <thead>
             <tr>
                 <th width="5%">ลำดับ</th>
@@ -35,10 +29,10 @@
   <br/>
 </div>
 
-<script>
-$(document).ready(function() {
-  $('#datatable').DataTable();
-});
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#datatable').DataTable();
+  });
 
 function createTable()
 {
