@@ -38,7 +38,7 @@
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti ti-harddrives"></i>จัดการข้อมูล</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="menu-icon ti ti-settings"></i><a href="page-login.html">จัดการระบบ</a></li>
+                        <li><i class="menu-icon ti ti-settings"></i><a href="?view=manageSystem">จัดการระบบ</a></li>
                         <li><i class="menu-icon ti ti-user"></i><a href="page-register.html">จัดการผู้ใช้</a></li>
                     </ul>
                 </li>
