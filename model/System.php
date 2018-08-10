@@ -26,7 +26,7 @@
         $db = DBManager::getConnection();
         $stmn = $db->prepare($sql);
         $stmn->bindParam(1,$obj["name"],PDO::PARAM_STR);
-        $stmn->bindParam(2,$obj["id_system"],PDO::PARAM_STR);
+        $stmn->bindParam(2,$obj["id_system"],PDO::PARAM_INT);
         if($stmn->execute()){
           $result = true ;
         }
@@ -39,11 +39,11 @@
     public static function delete($obj)
     {
       $result = false ;
-      $sql = "delete from aot_system where id_system";
+      $sql = "delete from aot_system where id_system = ?";
       try {
         $db = DBManager::getConnection();
         $stmn = $db->prepare($sql);
-        $stmn->bindParam(1,$obj["id_system"],PDO::PARAM_STR);
+        $stmn->bindParam(1,$obj["id_system"],PDO::PARAM_INT);
         if($stmn->execute()){
           $result = true ;
         }
@@ -60,8 +60,7 @@
       try {
         $db = DBManager::getConnection();
         $stmn = $db->prepare($sql);
-        $stmn->bindParam(1,$idOrder,PDO::PARAM_INT);
-        $stmn->bindParam(2,$idWork,PDO::PARAM_INT);
+        $stmn->bindParam(1,$id,PDO::PARAM_INT);
         $stmn->execute();
         if($row=$stmn->fetch(PDO::FETCH_ASSOC))
         {
@@ -80,8 +79,6 @@
       try {
         $db = DBManager::getConnection();
         $stmn = $db->prepare($sql);
-        $stmn->bindParam(1,$idOrder,PDO::PARAM_INT);
-        $stmn->bindParam(2,$idWork,PDO::PARAM_INT);
         $stmn->execute();
         while($row=$stmn->fetch(PDO::FETCH_ASSOC))
         {
